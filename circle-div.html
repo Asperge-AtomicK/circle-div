@@ -34,9 +34,35 @@
             border: 60px solid #dec8fa;
         }
 
+        .circle-container :first-child::before {
+            content: '';
+            position: absolute;
+            inset: -60px;
+            border-top: 60px solid #dec8fa;
+            border-right: 60px solid #dec8fa;
+            border-left: 60px solid red;
+            border-bottom: 60px solid red;
+            border-radius: 50%;
+            z-index: 100;
+            transform: rotate(20deg);
+            box-shadow: 0px -5px 100px rgba(0, 0, 0, .8);
+        }
+
         .circle-container :nth-child(2n) {
             left: -100px;
             border: 60px solid #fedbc1;
+        }
+
+        .circle-container :nth-child(2n)::before {
+            content: '';
+            position: absolute;
+            inset: -60px;
+            border-top: 60px solid rgba(0, 0, 0, 0);
+            border-right: 60px solid rgba(0, 0, 0, 0);
+            border-left: 60px solid #fedbc1;
+            border-bottom: 60px solid #fedbc1;
+            border-radius: 50%;
+            transform: rotate(20deg);
         }
     </style>
 </head>
